@@ -1,34 +1,32 @@
 import 'package:flutter/material.dart';
 
 class BottomBarWidget extends StatelessWidget {
-  const BottomBarWidget({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return BottomAppBar(
-        child: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            selectedItemColor: Colors.black,
-            // unselectedItemColor: Colors.grey,
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            iconSize: 35,
-            items: [
+    return BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        iconSize: 35,
+        items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add_box_outlined), label: "Reels"),
           BottomNavigationBarItem(
               icon: Image.asset(
-                "images/1.jpg",
+                "images/reels.png",
+                height: 30,
                 width: 30,
+                color: Colors.grey[700],
               ),
-              label: "home"),
-          BottomNavigationBarItem(icon: Icon(Icons.add), label: "add"),
+              label: "search"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_outline_rounded), label: "heart"),
-          BottomNavigationBarItem(
-              icon: CircleAvatar(
-                backgroundImage: AssetImage("images/1.jpg"),
-              ),
+              icon:
+                  CircleAvatar(backgroundImage: AssetImage("images/yusuf.jpg")),
               label: "user"),
-        ]));
+        ]);
   }
 }
